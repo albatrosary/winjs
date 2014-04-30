@@ -39,7 +39,8 @@
                     http.post('http://winjs-staging.azurewebsites.net/api.aspx', {
                         type: "addresult",
                         name: fileName,
-                        content: data
+                        content: data,
+                        auth: process.env.auth
                     }, function(res) {
                         done();
                     });
